@@ -76,30 +76,37 @@ class Author(models.Model):
     a_name = models.CharField(max_length = 100)
     email = models.EmailField(verbose_name="email address", max_length= 255, unique=True)
 
+    def __str__(self):
+        return self.AuthorID
+
 class Category(models.Model):
     CategoryId = models.AutoField(primary_key=True)
     c_name = models.CharField(max_length = 100)
+    def __str__(self):
+        return self.CategoryId
 
 class Article(models.Model):
-    ArticlId = models.AutoField(primary_key=True)
+    ArticleId = models.AutoField(primary_key=True)
     title = models.CharField(max_length = 200)
     summary = models.CharField(max_length = 1000)
-    AuthorID = models.ForeignKey(Author, related_name="AuthorID", on_delete=models.CASCADE)
-    CategoryID = models.ForeignKey(Category, related_name="CategoryID", on_delete= models.CASCADE)
+    AuthorID = models.ForeignKey(Author, on_delete=models.CASCADE)
+    CategoryID = models.ForeignKey(Category, on_delete= models.CASCADE)
+    def __str__(self):
+        return self.ArticleId
 
 
 class searchHistory(models.Model):
     HistoryID = models.AutoField(primary_key=True)
-    UserID = models.ForeignKey(User, related_name="id", on_delete = models.CASCADE)
+    UserID = models.ForeignKey(User, on_delete = models.CASCADE)
     query = models.CharField(max_length = 200)
 
 
 class user_article_interaction(models.Model):
     InteractionID = models.AutoField(primary_key=True)
-    UserID = models.ForeignKey(User, related_name="UserID", on_delete=models.CASCADE)
-    ArticleID = models.ForeignKey(Article, related_name="ArticleID", on_delete=models.CASCADE)
+    UserID = models.ForeignKey(User, on_delete=models.CASCADE)
+    ArticleID = models.ForeignKey(Article, on_delete=models.CASCADE)
 
 
 class article_author(models.Model):
-    ArticleID = models.ForeignKey(Article, related_name="ArticleID", on_delete=models.CASCADE)
-    AuthorID = models.ForeignKey(Author, related_name="AuthorID", on_delete=models.CASCADE)
+    ArticleID = models.ForeignKey(Article, on_delete=models.CASCADE)
+    AuthorID = models.ForeignKey(Author,on_delete=models.CASCADE)
