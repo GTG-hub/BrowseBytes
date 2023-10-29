@@ -113,12 +113,12 @@ class AuthorSerializer(serializers.ModelSerializer):
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ['CategoryId','c_name']
+        fields = ['CategoryID','c_name']
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fileds = ['ArticleId','title','summary','AuthorID','CategoryID']
+        fileds = ['ArticleID','title','summary','AuthorID','CategoryID','Link_article']
 
 class searchHistorySerializer(serializers.ModelSerializer):
     class Meta:
