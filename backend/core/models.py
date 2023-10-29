@@ -2,6 +2,11 @@ from django.db import models
 from django.contrib.auth.models import BaseUserManager , AbstractBaseUser
 
 
+
+INTERACTIONS=(
+    ('Saved','Saved'),
+    ('Viewed','Viewed')
+)
 #Creating user manager
 class UserManager(BaseUserManager):
     def create_user(self, email, name, password=None, password2 = None):
@@ -76,37 +81,47 @@ class Author(models.Model):
     a_name = models.CharField(max_length = 100)
     email = models.EmailField(verbose_name="email address", max_length= 255, unique=True)
 
-    def __str__(self):
+    def __int__(self):
         return self.AuthorID
 
 class Category(models.Model):
-    CategoryId = models.AutoField(primary_key=True)
+    CategoryID = models.AutoField(primary_key=True)
     c_name = models.CharField(max_length = 100)
-    def __str__(self):
-        return self.CategoryId
+    class Meta:
+        verbose_name_plural = 'Categories'
+    def __int__(self):
+        return self.CategoryID
+
+
 
 class Article(models.Model):
-    ArticleId = models.AutoField(primary_key=True)
+    ArticleID = models.AutoField(primary_key=True)
     title = models.CharField(max_length = 200)
     summary = models.CharField(max_length = 1000)
     AuthorID = models.ForeignKey(Author, on_delete=models.CASCADE)
     CategoryID = models.ForeignKey(Category, on_delete= models.CASCADE)
-    def __str__(self):
-        return self.ArticleId
-
+    Link_article = models.URLField(max_length=300, default="N/A")
+    def __int__(self):
+        return self.ArticleID
 
 class searchHistory(models.Model):
     HistoryID = models.AutoField(primary_key=True)
     UserID = models.ForeignKey(User, on_delete = models.CASCADE)
     query = models.CharField(max_length = 200)
+    class Meta:
+        verbose_name_plural = "Search_Histories"
 
 
 class user_article_interaction(models.Model):
-    InteractionID = models.AutoField(primary_key=True)
+    InteractionID = models.CharField(max_length=100, choices=INTERACTIONS, default="Viewed")
     UserID = models.ForeignKey(User, on_delete=models.CASCADE)
     ArticleID = models.ForeignKey(Article, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.InteractionID
 
 
 class article_author(models.Model):
     ArticleID = models.ForeignKey(Article, on_delete=models.CASCADE)
     AuthorID = models.ForeignKey(Author,on_delete=models.CASCADE)
+
+

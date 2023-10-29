@@ -34,5 +34,11 @@ class UserAdmin(BaseUserAdmin):
 
 # Now register the new UserAdmin...
 admin.site.register(User, UserAdmin)
+admin.site.register(Article)
+admin.site.register(Author)
+admin.site.register(Category)
+admin.site.register(user_article_interaction)
+admin.site.register(searchHistory)
+admin.site.register(article_author)
 
 # Register your models here.
