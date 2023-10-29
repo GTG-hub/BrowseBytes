@@ -4,7 +4,7 @@ from xml.dom import ValidationErr
 from django.utils.encoding import smart_str, force_bytes, DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from core.utils import *
+# from core.utils import *
 class UserRegistrationSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(style={'input_type' :'password'}, write_only = True)
     class Meta:
@@ -53,30 +53,30 @@ class UserChangePasswordSerializer(serializers.ModelSerializer):
         user.save()
         return
 
-class SendResetPwEmailSerializ(serializers.ModelSerializer):
-    email = serializers.EmailField(max_length = 255)
-    class Meta:
-        model = User
-        fields =['email']
-    def validate(self, attrs):
-        email = attrs.get('email')
-        if User.objects.filter(email=email).exists():
-            user = User.objects.get(email = email)
-            uid = urlsafe_base64_encode(force_bytes(user.id))
-            print("Encoded UID", uid)
-            token = PasswordResetTokenGenerator().make_token(user)
-            print('Password Reset Token', token)
-            link = 'http://127.0.0.1:8000/api/user/reset/'+uid+'/'+token
-            print('Password Reset Link', link )
-            body ='Click on the following link ot reset your password' + link
-            data = {
-                'subject' :"Reset your password",
-                'body':body,
-                'to_email':user.email
-            }
-            return attrs
-        else:
-            raise ValidationErr('You are not a registered user')
+# class SendResetPwEmailSerializ(serializers.ModelSerializer):
+#     email = serializers.EmailField(max_length = 255)
+#     class Meta:
+#         model = User
+#         fields =['email']
+#     def validate(self, attrs):
+#         email = attrs.get('email')
+#         if User.objects.filter(email=email).exists():
+#             user = User.objects.get(email = email)
+#             uid = urlsafe_base64_encode(force_bytes(user.id))
+#             print("Encoded UID", uid)
+#             token = PasswordResetTokenGenerator().make_token(user)
+#             print('Password Reset Token', token)
+#             link = 'http://127.0.0.1:8000/api/user/reset/'+uid+'/'+token
+#             print('Password Reset Link', link )
+#             body ='Click on the following link ot reset your password' + link
+#             data = {
+#                 'subject' :"Reset your password",
+#                 'body':body,
+#                 'to_email':user.email
+#             }
+#             return attrs
+#         else:
+#             raise ValidationErr('You are not a registered user')
 
 
 class UserPasswordResetSerializer(serializers.ModelSerializer):
