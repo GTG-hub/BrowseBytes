@@ -104,3 +104,33 @@ class UserPasswordResetSerializer(serializers.ModelSerializer):
         except DjangoUnicodeDecodeError as identifier:
             PasswordResetTokenGenerator().check_token(user,token)
             raise ValidationErr("Token is not valid or expired")
+
+class AuthorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Author
+        fields = ['AuthorID','a_name','email']
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['CategoryId','c_name']
+
+class ArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fileds = ['ArticleId','title','summary','AuthorID','CategoryID']
+
+class searchHistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = searchHistory
+        fields = ['HistoryID','UserID','query']
+
+class user_article_interaction(serializers.ModelSerializer):
+    class Meta:
+        model = user_article_interaction
+        fields = ['InteractionID','UserID','ArticleID']
+
+class article_author(serializers.ModelSerializer):
+    class Meta:
+        model = article_author
+        fields = ['ArticleID','AuthorID']
