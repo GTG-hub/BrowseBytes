@@ -1,0 +1,32 @@
+Category.objects.create(c_name = "Sports")
+Category.objects.create(c_name = "Entertainment")
+Category.objects.create(c_name = "Research_Papers")
+Category.objects.create(c_name = "General_News")
+Category.objects.create(c_name = "Business")
+Category.objects.create(c_name = "Science")
+Category.objects.create(c_name = "Technology")
+Category.objects.create(c_name = "Health")
+
+Author.objects.create(a_name = "Staci Mannella", email = "staci.mannella@bsu.edu")
+Article.objects.create(title = "Building bridges: a Qualitative exploration of the athlete – guide partnership in high-performance parasport", AuthorID = Author.objects.get(pk = 1), CategoryID = Category.objects.get(pk = 1), Link_article = "https://www.tandfonline.com/doi/full/10.1080/2159676X.2023.2260392")
+
+Author.objects.create(a_name = "Lyndsay M. C. Hayhurst", email = "lhayhurs@yorku.ca")
+Article.objects.create(title = "Building bridges: a Qualitative exploration of the athlete – guide partnership in high-performance parasport", AuthorID = Author.objects.get(pk = 2), CategoryID = Category.objects.get(pk = 1), Link_article = "https://www.tandfonline.com/doi/full/10.1080/2159676X.2023.2243955")
+
+Author.objects.create(a_name = "Fernando Santos", email = "fernando.sfsantos@hotmail.com")
+Article.objects.create(title = "Decision-makers’ interactions that co-determine Positive youth development through sport: a critical realist examination", AuthorID = Author.objects.get(pk = 3), CategoryID = Category.objects.get(pk = 1), Link_article = "https://www.tandfonline.com/doi/full/10.1080/2159676X.2023.2257692")
+
+Author.objects.create(a_name = "Jake Quinton", email = "jquinton@umass.edu")
+Article.objects.create(title = "Gay men, well-being, and sport participation: A phenomenological analysis", AuthorID = Author.objects.get(pk = 4), CategoryID = Category.objects.get(pk = 1), Link_article = "https://www.tandfonline.com/doi/full/10.1080/2159676X.2023.2255202")
+
+Author.objects.create(a_name = "Mihi Nemani", email = "mihi.nemani@waikato.ac.nz")
+Article.objects.create(title = "‘You made us feel at home’: towards Indigenous feminist methodologies with young wāhine in sport and exercise", AuthorID = Author.objects.get(pk = 5), CategoryID = Category.objects.get(pk = 1), Link_article = "https://www.tandfonline.com/doi/full/10.1080/2159676X.2023.2250536")
+
+Author.objects.create(a_name = "Lotte Hoek", email = "lotte.hoek@ed.ac.uk")
+Article.objects.create(title = "Bollywood", AuthorID = Author.objects.get(pk = 6), CategoryID = Category.objects.get(pk = 2), Link_article = "https://journals.sagepub.com/doi/full/10.1177/09749276211026141")
+
+Author.objects.create(a_name = "Shilajit Mitra", email = "shilajit.mitra@thehindu.co.in")
+Article.objects.create(title = "Filmi-ness: Kunal Basu on writing and cinema", AuthorID = Author.objects.get(pk = 7), CategoryID = Category.objects.get(pk = 2), Link_article = "https://www.thehindu.com/entertainment/movies/filmi-ness-kunal-basu-on-writing-and-cinema/article66861858.ece")
+
+Author.objects.create(a_name = "Shivani Pawaskar", email = "editorial.bl@india.com")
+Article.objects.create(title = "Mahabharata: The Kashmir Files helmer Vivek Agnihotri to produce a three-part movie based on the Hindu epic", AuthorID = Author.objects.get(pk = 8), CategoryID = Category.objects.get(pk = 2), Link_article = "https://www.bollywoodlife.com/news-gossipmahabharata-the-kashmir-files-helmer-vivek-agnihotri-to-produce-a-three-part-movie-based-on-the-hindu-epic-entertainment-news-2656356/")
