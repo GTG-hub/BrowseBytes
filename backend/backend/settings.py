@@ -77,18 +77,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'browsebytes',
-        'USER':'root',
-        'PASSWORD':'Harsan@2005',
-        'PORT':3306,
-        'HOST':'127.0.0.1'
+        'NAME': 'browsebytes',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'PORT': 3306,
+        'HOST': '127.0.0.1'
     }
 }
 
@@ -134,7 +133,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#JWT Setup
+# JWT Setup
 
 AUTH_USER_MODEL = 'core.User'
 
