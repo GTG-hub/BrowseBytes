@@ -1,6 +1,5 @@
 djangorestframework-simplejwt
 djangorestframework
 django
-dotenv
 django-cors-headers
 mysqlclient
