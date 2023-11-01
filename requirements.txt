@@ -7,3 +7,4 @@ mysqlclient
 huggingsound
 transformers
 torch
+sentence-transformers
