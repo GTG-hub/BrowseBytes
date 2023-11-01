@@ -4,6 +4,6 @@ django
 django-cors-headers
 mysqlclient
 huggingsound
+sentence-transformers 
 transformers
 torch
-sentence-transformers

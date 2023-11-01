@@ -1,10 +1,10 @@
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+
 model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 
 sentences = ["I am idiot", "Each sentence is converted"]
 query = "This is converted"
-
 
 def recommender_search(sentences: list, query: str):
     final_list = []
