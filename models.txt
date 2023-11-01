@@ -36,3 +36,30 @@ Article.objects.create(title = "The power of Bollywood: A study on opportunities
 
 Author.objects.create(a_name = "Aysha Iqbal Viswamohan", email = "draysha@iitm.ac.in")
 Article.objects.create(title = "Traversing boundaries: Contemporary Hindi cinema at international film festivals", AuthorID = Author.objects.get(pk = 10), CategoryID = Category.objects.get(pk = 2), Link_article ="https://www.tandfonline.com/doi/full/10.1080/14746689.2022.2115736")
+
+Author.objects.create(a_name = "Vikas Dhoot", email = "vikas.dhoot@thehindu.co.in")
+Article.objects.create(title = "Eight core sectors output grow 8.1% in September", AuthorID = Author.objects.get(pk = 11), CategoryID = Category.objects.get(pk = 5), Link_article = "https://www.thehindu.com/business/Industry/eight-core-sectors-output-grow-81-in-september/article67480425.ece")
+
+Author.objects.create(a_name = "N. RAVI KUMAR", email = "ravikumar.n@thehindu.co.in")
+Article.objects.create(title = "IRDAI mandates updated, simple customer info sheet for health insurance cover from January", AuthorID = Author.objects.get(pk = 12), CategoryID = Category.objects.get(pk = 5), Link_article = "https://www.thehindu.com/business/irdai-mandates-updated-simple-customer-info-sheet-for-health-insurance-cover-from-january/article67476831.ece")
+
+Author.objects.create(a_name = "Lalatendu Mishra", email = "lalatendu.mishra@thehindu.co.in")
+Article.objects.create(title = "India’s share of global growth to rise to 18% in 5 years: IMF official", AuthorID = Author.objects.get(pk = 13), CategoryID = Category.objects.get(pk = 5), Link_article = "https://www.thehindu.com/business/Economy/indias-share-of-global-growth-to-rise-to-18-in-5-years-imf-official/article67438455.ece")
+
+Author.objects.create(a_name = "Maitri Porecha", email = "porechamaitri.m@thehindu.co.in")
+Article.objects.create(title = "Budget 2023 | Marginal increase of 3.43% for health, research budget slashed by 6.87%", AuthorID = Author.objects.get(pk = 14), CategoryID = Category.objects.get(pk = 5), Link_article = "https://www.thehindu.com/business/budget/budget-2023-marginal-increase-of-343-for-health-research-budget-slashed-by-687/article66460116.ece")
+
+Author.objects.create(a_name = "Mahesh Langa", email = "mahesh.langa@thehindu.co.in")
+Article.objects.create(title = "Ahmedabad industrialist Parag Desai died of brain haemorrhage", AuthorID = Author.objects.get(pk = 15), CategoryID = Category.objects.get(pk = 5), Link_article = "https://www.thehindu.com/business/Industry/ahmedabad-industrialist-dies-trying-to-escape-stray-dog-attack/article67451805.ece")
+
+Author.objects.create(a_name = "Bindu Shajan Perappadan", email = "bindu.p@thehindu.co.in")
+Article.objects.create(title = "NMC to launch ‘one nation, one registration platform’ for doctors", AuthorID = Author.objects.get(pk = 16), CategoryID = Category.objects.get(pk = 8), Link_article = "https://www.thehindu.com/sci-tech/health/nmc-to-launch-one-nation-one-registration-platform-for-doctors/article67480688.ece")
+
+Author.objects.create(a_name = "Ramya Kannan", email = "ramya.kannan@thehindu.co.in")
+Article.objects.create(title = "Health Matters | Of procuring drugs, and gendering health care", AuthorID = Author.objects.get(pk = 17), CategoryID = Category.objects.get(pk = 8), Link_article = "https://www.thehindu.com/sci-tech/health/of-procuring-drugs-and-gendering-health-care/article67453539.ece")
+
+Author.objects.create(a_name = "Ramya Kannan", email = "ramya.kannan@thehindu.co.in")
+Article.objects.create(title = "A draft menstrual hygiene policy, at long last", AuthorID = Author.objects.get(pk = 18), CategoryID = Category.objects.get(pk = 8), Link_article = "https://www.thehindu.com/sci-tech/health/a-draft-menstrual-hygiene-policy-at-long-last/article67438825.ece")
+
+Author.objects.create(a_name = "Ramya Kannan", email = "ramya.kannan@thehindu.co.in")
+Article.objects.create(title = "Of killer hospital tragedies, and handling cancers and tuberculosis", AuthorID = Author.objects.get(pk = 19), CategoryID = Category.objects.get(pk = 8), Link_article = "https://www.thehindu.com/sci-tech/health/of-killer-hospital-tragedies-and-infectious-diseases/article67402709.ece")
