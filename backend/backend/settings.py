@@ -77,18 +77,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'browsebytes',
-        'USER':'root',
-        'PASSWORD':'root',
-        'PORT':3306,
-        'HOST':'127.0.0.1'
+        'NAME': 'browsebytes',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'PORT': 3306,
+        'HOST': '127.0.0.1'
     }
 }
 
@@ -134,7 +133,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#JWT Setup
+# JWT Setup
 
 AUTH_USER_MODEL = 'core.User'
 
@@ -147,12 +146,12 @@ REST_FRAMEWORK = {
     ]
 }
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
-EMAIL_USE_TLS = True
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+# EMAIL_USE_TLS = True
 
 
 SIMPLE_JWT = {

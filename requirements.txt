@@ -4,3 +4,6 @@ django
 dotenv
 django-cors-headers
 mysqlclient
+huggingsound
+transformers
+torch
