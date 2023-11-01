@@ -142,6 +142,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_PERMISSIONS_CLASSES':[
+        'rest_framework.permission.AllowAny'
+    ]
 }
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
