@@ -35,4 +35,4 @@ Author.objects.create(a_name = "Yanyan Hong", email = "y.hong@uqconnect.edu.au")
 Article.objects.create(title = "The power of Bollywood: A study on opportunities, challenges, and audiences’ perceptions of Indian cinema in China", AuthorID = Author.objects.get(pk = 9), CategoryID = Category.objects.get(pk = 2), Link_article = "https://journals.sagepub.com/doi/10.1177/20594364211022605")
 
 Author.objects.create(a_name = "Aysha Iqbal Viswamohan", email = "draysha@iitm.ac.in")
-Article.objects.create(title = "Traversing boundaries: Contemporary Hindi cinema at international film festivals", AuthorID = Author.objects.get(pk = 9), CategoryID = Category.objects.get(pk = 2), Link_article ="https://www.tandfonline.com/doi/full/10.1080/14746689.2022.2115736")
+Article.objects.create(title = "Traversing boundaries: Contemporary Hindi cinema at international film festivals", AuthorID = Author.objects.get(pk = 10), CategoryID = Category.objects.get(pk = 2), Link_article ="https://www.tandfonline.com/doi/full/10.1080/14746689.2022.2115736")
