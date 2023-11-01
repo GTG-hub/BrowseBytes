@@ -77,18 +77,25 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+<<<<<<< HEAD
         'NAME':'browsebytes',
         'USER':'root',
         'PASSWORD':'Apratim$1947',
         'PORT':3306,
         'HOST':'127.0.0.1'
+=======
+        'NAME': 'browsebytes',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'PORT': 3306,
+        'HOST': '127.0.0.1'
+>>>>>>> 29294ca1249a620c8c3be1b516bfc0a484ebc754
     }
 }
 
@@ -134,7 +141,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#JWT Setup
+# JWT Setup
 
 AUTH_USER_MODEL = 'core.User'
 
@@ -142,6 +149,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_PERMISSIONS_CLASSES':[
+        'rest_framework.permission.AllowAny'
+    ]
 }
 
 # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"

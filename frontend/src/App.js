@@ -3,6 +3,9 @@ import { Profile } from "./pages/Profile";
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import { Home } from "./pages/Home";
 import { SearchResults } from "./pages/Searchresults";
+import { Search } from "./pages/Search";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Profile/" element={<Profile/>} />
           <Route path="/Search_Results/" element={<SearchResults/>} />
+          <Route path="/Signin" element={<Signin />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Search" element = {<Search />} />
         </Routes>
       </Router>
     </div>
