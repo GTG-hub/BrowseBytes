@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate
 from core.renderers import *
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import api_view
 #Generating token manually
 def get_tokens_for_user(user):
     refresh = RefreshToken.for_user(user)
