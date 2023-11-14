@@ -2,6 +2,7 @@
 import React from "react";
 import {FaSearch, FaFilter} from "react-icons/fa";
 import { Result } from "../components/Result";
+import 'animate.css';
 
 export const Search = () => {
     return (

@@ -1,9 +1,10 @@
 import React from "react";
+import 'animate.css';
 import {FaThumbsUp,FaThumbsDown,FaBookmark,FaComment} from "react-icons/fa"
 
 export const Result = () => {
     return (
-        <div className="my-4 mx-[10%]">
+        <div className="wow animate__animated animate__slideInUp my-4 mx-[10%]">
             <div className="flex flex-col p-3 border rounded-lg shadow-md hover:shadow-lg">
                 <div className="title text-3xl">
                     Title

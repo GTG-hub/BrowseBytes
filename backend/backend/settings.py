@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'browsebytes',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'Apratim$1947',
         'PORT': 3306,
         'HOST': '127.0.0.1'
     }
