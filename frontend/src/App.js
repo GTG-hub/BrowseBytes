@@ -1,11 +1,10 @@
 import React from "react";
 import { Profile } from "./pages/Profile";
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { SearchResults } from "./pages/Searchresults";
 import { Search } from "./pages/Search";
-import Signin from "./pages/Signin";
-import Signup from "./pages/Signup";
+import { Signin_Register } from "./pages/Signin_Register";
 
 function App() {
   return (
@@ -13,11 +12,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Profile/" element={<Profile/>} />
-          <Route path="/Search_Results/" element={<SearchResults/>} />
-          <Route path="/Signin" element={<Signin />} />
-          <Route path="/Signup" element={<Signup />} />
-          <Route path="/Search" element = {<Search />} />
+          <Route path="/Profile/" element={<Profile />} />
+          <Route path="/Search_Results/" element={<SearchResults />} />
+          <Route path="/Signin_Register" element={<Signin_Register />} />
+          <Route path="/Search" element={<Search />} />
         </Routes>
       </Router>
     </div>
