@@ -17,7 +17,7 @@ export const Profile = () => {
   const [activeWorkspace, setActiveWorkspace] = useState(false);
   const [activeHistoryspace, setActiveHistoryspace] = useState(false);
   const [activeProfilecss, setActiveProfilecss] = useState(
-    "bg-[#f3] text-black shadow-xl"
+    "bg-[#005b96] shadow-xl"
   );
   const [activePasswordcss, setActivePasswordcss] = useState("");
   const [activeHistoryspacecss, setActiveHistoryspacecss] = useState("");
@@ -27,7 +27,7 @@ export const Profile = () => {
     setActiveHistoryspace(false);
     setActiveWorkspace(false);
     setActivePassword(false);
-    setActiveProfilecss("bg-[#f3f6f4] shadow-xl my-0");
+    setActiveProfilecss("bg-[#005b96] shadow-xl my-0");
     setActiveHistoryspacecss("");
     setActivePasswordcss("");
     setActiveWorkspacecss("");
@@ -40,7 +40,7 @@ export const Profile = () => {
     setActivePassword(true);
     setActiveProfilecss("");
     setActiveHistoryspacecss("");
-    setActivePasswordcss("bg-[#f3f6f4] shadow-xl");
+    setActivePasswordcss("bg-[#005b96] shadow-xl");
     setActiveWorkspacecss("");
   };
   const handleWorkspace = () => {
@@ -51,7 +51,7 @@ export const Profile = () => {
     setActiveProfilecss("");
     setActiveHistoryspacecss("");
     setActivePasswordcss("");
-    setActiveWorkspacecss("bg-[#f3f6f4] shadow-xl");
+    setActiveWorkspacecss("bg-[#005b96] shadow-xl");
   };
   const handleHistory = () => {
     setActiveProfile(false);
@@ -59,7 +59,7 @@ export const Profile = () => {
     setActiveWorkspace(false);
     setActivePassword(false);
     setActiveProfilecss("");
-    setActiveHistoryspacecss("bg-[#f3f6f4] shadow-xl");
+    setActiveHistoryspacecss("bg-[#005b96] shadow-xl");
     setActivePasswordcss("");
     setActiveWorkspacecss("");
   };
@@ -122,9 +122,7 @@ export const Profile = () => {
                 </li>
                 <li
                   id="history_left"
-                  className={`text-center bg-[#f3f6f4] my-auto hover:bg-[#005b96] hover:border hover:text-${
-                    activeHistoryspacecss ? "black" : "white"
-                  } py-2 w-full ${activeHistoryspacecss}`}
+                  className={`text-center bg-[#f3f6f4] my-auto hover:bg-[#005b96] hover:border hover:text-white py-2 w-full ${activeHistoryspacecss}`}
                   onClick={handleHistory}
                 >
                   History

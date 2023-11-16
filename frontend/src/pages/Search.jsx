@@ -8,17 +8,18 @@ import "animate.css";
 
 export const Search = () => {
   return (
-    <div className="myclass bg-[#011f4b]">
+    <div className=" bg-[#011f4b]">
+    <div className="myclass bg-[#011f4b] h-[100%]">
       <div className="mx-[10%]">
-        <div className="  my-5">
-          <div className="Heading text-3xl md:text-7xl text-center my-3 text-white">
+        <div className="my-0">
+          <div className="Heading text-3xl md:text-7xl text-center my-0 text-white">
             BrowseBytes
           </div>
-          <div className="text-sm text-gray-400 mt-7 text-center">
+          <div className="text-sm text-gray-400 mt-3 text-center">
             Searching for articles on BrowseBytes
           </div>
         </div>
-        <div className="Search flex flex-row justify-center items-center">
+        <div className="Search flex flex-row justify-center items-center mt-5">
           <input
             className="border w-[75%] h-[37px] rounded-l-lg px-2 border-gray-300 rounded-r-none shadow-md"
             placeholder="Search"
@@ -73,6 +74,7 @@ export const Search = () => {
           <Result />
         </div>
       </div>
+    </div>
     </div>
   );
 };
