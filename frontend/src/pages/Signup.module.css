@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 .myclass {
   font-family: "Poppins", sans-serif;
-  background: #ececec;
+  background: #011f4b;
 }
 .rowclass {
   width: 930px;
@@ -21,7 +21,10 @@
 .rowclass {
   border-radius: 30px;
 }
-
+.mybtn {
+  background-color: #005b96;
+  color: white;
+}
 @media only screen and (max-width: 768px) {
   .rowclass {
     margin: 0 10px;

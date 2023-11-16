@@ -25,11 +25,11 @@ function Signup() {
         >
           <div
             className={`${styles.colclass} col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box`}
-            style={{ background: "#103cbe" }}
+            style={{ background: "#005b96" }}
           >
             <div className="featured-image mb-3">
               <img
-                src="images/image.png"
+                src="images/image1.png"
                 className="img-fluid"
                 style={{ width: "250px" }}
               />
@@ -104,7 +104,7 @@ function Signup() {
                 </div>
               </div>
               <div className="input-group mb-3">
-                <button className="btn btn-lg btn-primary w-100 fs-6">
+              <button className={`${styles.mybtn} mybtn btn btn-lg w-100 fs-6`}>
                   Register Now
                 </button>
               </div>

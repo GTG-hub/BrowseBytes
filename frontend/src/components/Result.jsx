@@ -4,8 +4,8 @@ import 'animate.css'
 
 export const Result = () => {
     return (
-        <div className="wow animate__animated animate__slideInUp my-4 mx-[10%]">
-            <div className="flex flex-col p-3 border rounded-lg shadow-md hover:shadow-lg">
+        <div className="wow animate__animated animate__slideInUp my-4 mx-[10%] bg-[#f3f6f4] rounded-2xl">
+            <div className="flex flex-col p-3 shadow-md hover:shadow-lg">
                 <div className="title text-3xl">
                     Title
                 </div>
