@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { SearchResults } from "./pages/Searchresults";
 import { Search } from "./pages/Search";
-import { Signin_Register } from "./pages/Signin_Register";
-import { Summary } from "./pages/Summary";
-
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
+import Summary from "./pages/summary";
 function App() {
   return (
     <div>
@@ -15,9 +15,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Profile/" element={<Profile />} />
           <Route path="/Search_Results/" element={<SearchResults />} />
-          <Route path="/Signin_Register" element={<Signin_Register />} />
-          <Route path="/Summary" element={<Summary />} />
+          <Route path="/Signin" element={<Signin />} />
+          <Route path="/Signup" element={<Signup />} />
           <Route path="/Search" element={<Search />} />
+          <Route path="/Summary" element={<Summary />} />
         </Routes>
       </Router>
     </div>

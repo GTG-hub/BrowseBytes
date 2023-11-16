@@ -1,27 +1,12 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./summary_style.css";
 
 function Summary() {
   return (
-    <div className="myclass">
-      <nav class="navbar navbar-light" style="margin-bottom: 5px">
-        <form class="form-inline ml-auto" style="max-width: 500px">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-            style="width: 70%"
-          />
-          <button class="btn btn-primary my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
-      </nav>
+    <div className="myclass2">
       <h1>SUMMARY</h1>
-      <div class="container">
+      <div className="container2">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
           delectus vel quibusdam magni, corporis animi labore tenetur, inventore
