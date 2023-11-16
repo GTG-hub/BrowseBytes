@@ -1,15 +1,36 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./summary.module.css";
+import { FaSearch, FaFilter } from "react-icons/fa";
 function Summary() {
   return (
     <div className={styles.myclass2}>
-      <form className={styles.myForm}>
-        <input type="text" placeholder="Search here" />
-        <button type="submit" style={{ backgroundColor: "#0091E6" }}>
-          Search
-        </button>
-      </form>
+      <div className="mx-[10%]">
+        <div className="  my-5">
+          <div className="Heading text-3xl md:text-7xl text-center my-3 text-white">
+            BrowseBytes
+          </div>
+          <div className="text-sm text-gray-400 mt-7 text-center ">
+            Searching for articles on BrowseBytes
+          </div>
+        </div>
+      </div>
+      <div className="Search flex flex-row justify-center items-center w-[50%]">
+        <input
+          className="border w-[75%] h-[37px] rounded-l-lg px-2 border-gray-300 rounded-r-none shadow-md"
+          placeholder="Search"
+        />
+        <div className="serchicon w-[20%] sm:w-[15%] md:w-[15%] h-[37px] flex flex-col justify-around bg-[#005b96] hover:shadow-lg rounded-r-lg">
+          <div className="flex flex-row mx-auto text-xs sm:text-base border-gray-300 rounded-md shadow-md text-white px-2">
+            <div className="my-auto mx-1">
+              <FaSearch className="mx-auto" />
+            </div>
+            <div>
+              <button type="submit">Go</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <h1>SUMMARY</h1>
       <div className={styles.container2}>
         <p>
