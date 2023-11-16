@@ -1,15 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./signup_style.css";
+import styles from "./Signup.module.css";
 
 function Signup() {
+  const fadeIn = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { duration: 1000 },
+  });
+
+  const slideIn = useSpring({
+    from: { transform: "translateX(-100px)", opacity: 0 },
+    to: { transform: "translateX(0)", opacity: 1 },
+    config: { duration: 500 },
+  });
   return (
-    <div className="myclass">
+    <animated.div style={fadeIn} div className={styles.myclass}>
       <div className="container d-flex justify-content-center align-items-center min vh-100">
-        <div className="row border rounded-5 p-3 bg-white shadow box-area">
+        <animated.div
+          style={slideIn}
+          className={`${styles.rowclass} row border rounded-5 p-3 bg-white shadow box-area`}
+        >
           <div
-            className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+            className={`${styles.colclass} col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box`}
             style={{ background: "#103cbe" }}
           >
             <div className="featured-image mb-3">
@@ -20,7 +35,7 @@ function Signup() {
               />
             </div>
             <p
-              className="text-white fs-2"
+              className={`${styles.mytext} text-white fs-2`}
               style={{
                 fontFamily: "Courier New, Courier, monospace",
                 fontWeight: 600,
@@ -29,7 +44,7 @@ function Signup() {
               Get Started
             </p>
             <small
-              className="text-white text-wrap text-center"
+              className={`${styles.mytext} text-white text-wrap text-center`}
               style={{
                 width: "17rem",
                 fontFamily: "Courier New, Courier, monospace",
@@ -39,37 +54,37 @@ function Signup() {
               today!
             </small>
           </div>
-          <div className="col-md-6 right-box">
+          <div className={`${styles.rightclass} col-md-6 right-box`}>
             <div className="row align-items-center">
-              <div className="header-text mb-4">
+              <div className={`${styles.headerclass} header-text mb-4`}>
                 <h2>Welcome to BrowseBytes!</h2>
                 <p>Let's get started on your journey!</p>
               </div>
               <div className="input-group mb-3">
                 <input
                   type="text"
-                  className="form-control form-control-lg bg-light fs-6"
+                  className={`${styles.formclass} form-control form-control-lg bg-light fs-6`}
                   placeholder="Full Name"
                 />
               </div>
               <div className="input-group mb-3">
                 <input
                   type="text"
-                  className="form-control form-control-lg bg-light fs-6"
+                  className={`${styles.formclass} form-control form-control-lg bg-light fs-6`}
                   placeholder="Email Address"
                 />
               </div>
               <div className="input-group mb-3">
                 <input
                   type="password"
-                  className="form-control form-control-lg bg-light fs-6"
+                  className={`${styles.formclass} form-control form-control-lg bg-light fs-6`}
                   placeholder="Password"
                 />
               </div>
               <div className="input-group mb-1">
                 <input
                   type="password"
-                  className="form-control form-control-lg bg-light fs-6"
+                  className={`${styles.formclass} form-control form-control-lg bg-light fs-6`}
                   placeholder="Confirm Password"
                 />
               </div>
@@ -101,9 +116,9 @@ function Signup() {
               </div>
             </div>
           </div>
-        </div>
+        </animated.div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 export default Signup;

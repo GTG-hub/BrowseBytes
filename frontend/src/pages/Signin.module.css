@@ -3,36 +3,34 @@
   font-family: "Poppins", sans-serif;
   background: #ececec;
 }
-.box-area {
+.rowclass {
   width: 930px;
 }
-.right-box {
+.mytext {
+  transform: translate(0px, 10px);
+}
+.rightclass {
   padding: 40px 30px 40px 40px;
 }
-.text-white {
-  transform: translate(0px, 28px);
-}
-::placeholder {
+.formclass ::placeholder {
   font-size: 16px;
 }
-.rounded-4 {
+.colclass {
   border-radius: 20px;
 }
-.rounded-5 {
+.rowclass {
   border-radius: 30px;
 }
-.header-text mb-4 {
-  transform: translate(200px);
-}
+
 @media only screen and (max-width: 768px) {
-  .box-area {
+  .rowclass {
     margin: 0 10px;
   }
-  .left-box {
+  .colclass {
     height: 100px;
     overflow: hidden;
   }
-  .right-box {
+  .rightclass {
     padding: 20px;
   }
 }

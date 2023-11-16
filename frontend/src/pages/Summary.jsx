@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./summary_style.css";
-
+import styles from "./summary.module.css";
 function Summary() {
   return (
-    <div className="myclass2">
+    <div className={styles.myclass2}>
+      <form className={styles.myForm}>
+        <input type="text" placeholder="Search here" />
+        <button type="submit" style={{ backgroundColor: "#0091E6" }}>
+          Search
+        </button>
+      </form>
       <h1>SUMMARY</h1>
-      <div className="container2">
+      <div className={styles.container2}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
           delectus vel quibusdam magni, corporis animi labore tenetur, inventore
