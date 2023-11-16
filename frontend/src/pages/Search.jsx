@@ -6,7 +6,7 @@ import 'animate.css';
 
 export const Search = () => {
     return (
-        <div className=" mx-[10%]">
+        <div className="mx-[10%]">
             <div className="  my-5"> 
                 <div className="Heading text-3xl md:text-7xl text-center my-3">
                     BrowseBytes 
@@ -52,7 +52,7 @@ export const Search = () => {
                     </div>
                 </div>                                                  
             </div>
-            <div className="my-3 flex flex-col">  
+            <div className="wow my-3 flex flex-col">  
                 <Result/>
                 <Result/>
                 <Result/>
