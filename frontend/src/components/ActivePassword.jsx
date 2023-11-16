@@ -1,8 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export const ActivePassword = () => {
     return(
-        <div id="password_right" className="col-sm-8 flex flex-col">
+      <motion.div
+      className=" col-sm-8 flex flex-col"
+      initial={{x:"100%"}}
+      animate = {{x:"0%"}}
+      transition = {{
+          ease:"linear",
+          duration: 0.5,
+        }}
+      id="password_right"
+  >
         <div><h1 className="text-3xl font-bold">Password Settings</h1></div>
         <div className="row flex flex-row mt-3">
            <div className="lable my-1 text-xs sm:text-base">
@@ -31,9 +41,9 @@ export const ActivePassword = () => {
           </div>
        </div>
        <div className="mt-3 row mx-2">
-          <button className="border ease-in duration-300 p-2 w-[100px] rounded-lg bg-slate-100 hover:text-white hover:bg-[#0d6efd] shadow-md hover:shadow-xl mx-1">Update</button>
+          <button type="submit" className="border ease-in duration-300 p-2 w-[100px] rounded-lg bg-slate-100 hover:text-white hover:bg-[#0d6efd] shadow-md hover:shadow-xl mx-1">Update</button>
           {/* <!-- <button className="border p-2 w-[100px] rounded-lg bg-slate-100 hover:text-white hover:bg-[#0d6efd] shadow-md hover:shadow-xl mx-1">Cancle</button> --> */}
        </div>
-      </div>
+       </motion.div>
     )
 }

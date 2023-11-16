@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../../node_modules/bootstrap/dist/js/bootstrap.bundle';
+// import '../../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import {FaUser} from 'react-icons/fa';
 import {ActiveHistory} from "../components/ActiveHistory";
 import { ActivePassword } from "../components/ActivePassword";
 import { ActiveWorkspace } from "../components/ActiveWorkspace";
 import { ActiveProfile } from "../components/ActiveProfile";
+import {motion, useAnimationControls} from "framer-motion"
 
 export const Profile = () => {
+    const controls = useAnimationControls()
     const [activeProfile,setActiveProfile] = useState(true); 
     const [activePassword,setActivePassword] = useState(false);
     const [activeWorkspace,setActiveWorkspace] = useState(false);
@@ -23,7 +25,7 @@ export const Profile = () => {
         setActiveHistoryspace(false);
         setActiveWorkspace(false);
         setActivePassword(false);
-        setActiveProfilecss('bg-primary text-white shadow-xl');
+        setActiveProfilecss('bg-primary text-white shadow-xl my-0');
         setActiveHistoryspacecss('');
         setActivePasswordcss('');
         setActiveWorkspacecss('');
@@ -60,11 +62,28 @@ export const Profile = () => {
         setActiveWorkspacecss('');
     }
 
+    useEffect(() => {
+        controls.start(i => ({
+          opacity: 0,
+          x: 100,
+          transition: { delay: i * 0.3 },
+        }))
+      }, [])
+
     return (
         <div>
-            <div className="h-full my-1">
-                <div className="row mx-1">
-                    <div className="col-sm-4 border-b sm:border-b-0 sm:border-r">
+            <div className="h-full sm:h-[99vh] my-1">
+                
+                <div className="row mx-1 h-full">
+                    <motion.div 
+                      initial={{x:"-100%"}}
+                      animate = {{x:"0%"}}  
+                      transition = {{
+                        ease:"linear",
+                        duration: 0.5,
+                      }}
+                      className="col-sm-4 border-b sm:border-b-0 sm:border-r"
+                    >
                     {/* <i className="fa-solid fa-user border rounded-circle p-4 border-black fs-1 mb-2"></i> */}
                       
                         <ul className="flex flex-col justify-center items-center p-0">
@@ -76,12 +95,15 @@ export const Profile = () => {
                             <li id="history_left" className={`text-center my-auto hover:bg-[#0d6efd] hover:border hover:text-white py-2 w-full ${activeHistoryspacecss}`} onClick={handleHistory}>History</li>
                             {/* <!-- <li id="notifications_left" className="text-center my-auto hover:bg-[#0d6efd] hover:border hover:text-white py-2">Notifications</li> --> */}
                         </ul>
-                    </div>
-                    {activeProfile && (<ActiveProfile />)}
-                    {activePassword && (<ActivePassword/>)}
-                    {activeWorkspace && (<ActiveWorkspace/> )}
-                    {activeHistoryspace && (<ActiveHistory />)}
-                  </div>
+                    </motion.div>
+                   
+                        {activeProfile && (<ActiveProfile />)}
+                        {activePassword && (<ActivePassword/>)}
+                        {activeWorkspace && (<ActiveWorkspace/> )}
+                        {activeHistoryspace && (<ActiveHistory />)}
+
+
+                </div>
             </div>
         </div>
     )

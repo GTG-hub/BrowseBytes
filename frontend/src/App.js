@@ -6,11 +6,13 @@ import { SearchResults } from "./pages/Searchresults";
 import { Search } from "./pages/Search";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
-import Summary from "./pages/summary";
+// import Summary from "./pages/Summary";
+import { Navbar } from "./components/Navbar";
 function App() {
   return (
     <div>
       <Router>
+        <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Profile/" element={<Profile />} />

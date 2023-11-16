@@ -1,8 +1,18 @@
 import React from "react";
+import {motion} from "framer-motion"
 
 export const ActiveProfile = () => {
     return (
-        <div id="account_right" className="col-sm-8 flex flex-col">
+      <motion.div
+      className=" col-sm-8 flex flex-col"
+      initial={{x:"100%"}}
+      animate = {{x:"0%"}}
+      transition = {{
+          ease:"linear",
+          duration: 0.5,
+        }}
+      id="profile_right"
+  >
         <div><h1 className="text-3xl font-bold">Account Settings</h1></div>
           <form>
               <div className="row">
@@ -85,8 +95,8 @@ export const ActiveProfile = () => {
             <textarea className="border w-[100%] h-[100px]"></textarea>
           </div>
        </div>
-              
+       <button type="submit" className="border ease-in duration-300 p-2 w-full rounded-lg bg-slate-100 hover:text-white hover:bg-[#0d6efd] shadow-md hover:shadow-xl mx-1">Update</button>
           </form>
-      </div>
+          </motion.div>
     )
 }

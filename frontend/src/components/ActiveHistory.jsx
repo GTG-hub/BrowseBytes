@@ -1,9 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Tab } from "./Historytab";
+import { motion } from "framer-motion";
 
 export const ActiveHistory = () =>{
     return(
-        <div id="history_right" className="col-sm-8 h-[600px]">
+      <motion.div
+      className=" col-sm-8 flex flex-col"
+      initial={{x:"100%"}}
+      animate = {{x:"0%"}}
+      transition = {{
+          ease:"linear",
+          duration: 0.5,
+        }}
+      id="history_right"
+  >
         <div className="row my-2 font-bold text-3xl">
           <h1>History</h1>
         </div>
@@ -119,7 +130,9 @@ export const ActiveHistory = () =>{
             <div className="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt numquam placeat facere? Ipsam quam, quisquam rerum dolores illo quaerat in atque inventore ratione, quasi at cupiditate hic animi officiis fuga.</div>
           </div>
         </div>
+        <Tab/>
+        <Tab/>
 
-      </div>
+      </motion.div>
     )
 }
