@@ -7,11 +7,11 @@ import { useState } from "react";
 
 export const ActiveWorkspace = () => {
   const [create,setCreate] = useState(false);
-  const folders = ['Business','Entertainment']
+  const folders = ['business','entertainment']
   const len = folders.length
     return (
       <motion.div
-        className=" col-sm-8 flex flex-col"
+        className=" col-sm-8 flex flex-col h-[100vh] w-[100vw]"
         initial={{x:"100%"}}
         animate = {{x:"0%"}}
         transition = {{
@@ -20,7 +20,7 @@ export const ActiveWorkspace = () => {
         }}
         id="workspace_right"
       >
-        <div><h1 className="text-3xl font-bold text-white">Workspace</h1></div>
+        <div><h1 className="text-3xl font-bold">Workspace</h1></div>
         <AnimatePresence>
               {create && 
                   <motion.div
@@ -29,8 +29,8 @@ export const ActiveWorkspace = () => {
                     
                   >
                     
-                      <div className="row flex flex-col  bg-[#f3f6f4]">
-                        <div className="flex flex-col items-end text-xl text-[#011f4b]" onClick={()=>setCreate(false)}><MdFolderDelete/></div>
+                      <div className="row flex flex-col">
+                        <div className="flex flex-col items-end text-xl" onClick={()=>setCreate(false)}><MdFolderDelete/></div>
                         <div className="w-full text-center font-semibold italic ">Organize Your Folder</div>
                         <form className="flex flex-col">
                           <label for="folderName" className="text-sm italic font-bold mx-1">Folder Name</label>
@@ -49,7 +49,7 @@ export const ActiveWorkspace = () => {
                             <option value={"article"}>article</option>
                             <option value={"article"}>article</option>
                           </select>
-                          <button className="w-[100%] bg-[#011f4b] text-white h-[30px] hover:shadow-2xl rounded-md mx-1 my-2 shadow-lg" onClick={()=>setCreate(false)} >Create</button>
+                          <button className="w-[100%] bg-black text-white h-[30px] hover:shadow-2xl rounded-md mx-1 my-2 shadow-lg" onClick={()=>setCreate(false)} >Create</button>
                         </form>
                       </div>
                   </motion.div>
@@ -58,9 +58,9 @@ export const ActiveWorkspace = () => {
             </AnimatePresence>
         <div onClick={()=>{setCreate(!create)}} className="row my-2">
           <div className="col-sm-4">
-            <div className="flex flex-row hover:shadow-lg justify-around bg-[#f3f6f4] text-[#011f4b] rounded-sm" onClick={() => setCreate(true)}>
-              <div className="mx-1 flex flex-col justify-center items-center text-[#011f4b]"><FaFolderPlus className="my-auto"/></div>
-              <div className="mx-1">Create Folder</div>
+            <div className="flex flex-row hover:shadow-lg justify-around bg-black text-white rounded-sm" onClick={() => setCreate(true)}>
+              <div className="mx-1 flex flex-col justify-center items-center"><FaFolderPlus className="my-auto"/></div>
+              {/* <div className="mx-1">create folder</div> */}
             </div>  
 
           </div>
@@ -143,8 +143,8 @@ export const ActiveWorkspace = () => {
                     whileTap={{scale:1.1}}
                     drag
                     className=" flex flex-col mx-2">
-                     <div className="text-5xl my-1 mx-4 hover:cursor-pointer text-white"><MdFolder/></div>
-                     <div className="my-1 mx-4 font-bold italic text-white">{value}</div>
+                     <div className="text-5xl my-1 mx-4 hover:cursor-pointer"><MdFolder/></div>
+                     <div className="my-1 mx-4 font-bold italic">{value}</div>
                   </motion.div>
                 ))
               }
