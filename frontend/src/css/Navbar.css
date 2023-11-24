@@ -1,0 +1,272 @@
+html,body{
+    overflow-x: hidden;
+}
+.navbar{
+    position: fixed;
+    z-index: 100;
+    font-weight: 460;
+    transition: 1000ms ease-in;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    background-color: #0A0917;
+}
+.nav_img img{
+    display: inline-block;
+    height: 60px;
+    object-fit: scale-down;
+    padding: 5px;
+    padding-left:20px ;
+}
+.navbar{
+    z-index: 1000000000;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 15% 80% 5%;
+}
+.nav_list{
+    display: flex;
+    padding-top: 5px;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    list-style: none;
+    font-size: 18px;
+}
+.nav_list1{
+    display: flex;
+    padding-top: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    font-size: 18px;
+}
+.navbar a:not([href]):not([tabindex]) {
+    display: inline;
+    text-decoration: none;
+    color: white;
+}
+.navbar a:not([href]):not([tabindex]){
+    background: 
+        linear-gradient(currentColor 0 0) 
+        var(--p, 0) 100% /var(--d, 0) 3px 
+        no-repeat;
+    transition: 0.5s, background-position 0s 0.3s;
+}
+.navbar a:not([href]):not([tabindex]):hover  {
+    color: #7056D9;
+    --d: 100%;
+    --p: 100%;
+}
+.navbar .nav_item {
+    display: inline;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.navbar .nav_item{
+    background: 
+        linear-gradient(currentColor 0 0) 
+        var(--p, 0) 100% /var(--d, 0) 3px 
+        no-repeat;
+    transition: 0.5s, background-position 0s 0.3s;
+}
+.navbar .nav_item:hover  {
+    color: #7056D9;
+    --d: 100%;
+    --p: 100%;
+}
+.registration{
+    display: flex;
+    padding-top: 5px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 20px;
+}
+.log_in{
+    display: inline;
+    text-decoration: none;
+    text-shadow: 0 5px rgba(239, 239, 239, 0.25);
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    padding: 5px 30px;
+    margin: 0;
+    border : solid 5px;
+    border-radius: 30px;
+    border-color: #550CDF;
+    transition: 300ms ease-out;
+}
+.log_in:hover{
+    background-color: #550CDF;
+    text-shadow: 0 5px rgba(255, 255, 255, 0.2);
+}
+.register{
+    display: inline;
+    text-shadow: 0 5px rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    margin: 0;
+    color: white;
+    background-color: #4e00df;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border-color: #550CDF;
+    transition: 700ms ease-out;
+}
+.register:hover{
+    color: #550CDF;
+    background-color: white;
+    text-shadow: 0 5px rgba(0, 0, 0, 0.174);
+}
+.resp_nav{
+    display: none;
+    color: white;
+}
+
+.hamburger {
+    position: absolute;
+    top: 5em;
+    right: 3%;
+    margin-left: -2em;
+    margin-top: -60px;
+    width: 2em;
+    height: 45px;
+    z-index: 5;
+  }
+@media (max-width : 1000px){
+    .resp_nav{
+        display: block;
+    }
+    .navbar{
+        display: grid;
+        grid-template-columns:  20% 30% 50%;
+    }
+    .registration{
+        grid-column-start: 3;
+    }
+    .list{
+        display: none;
+    }
+    .nav_list{
+        padding: 0;
+        flex-direction: column;
+        grid-row-start: 2;
+        width: 100vw;
+        height: 95vh;
+        background-color: black;
+    }
+    .nav_list1{
+        padding: 0;
+        flex-direction: column;
+        grid-row-start: 2;
+        width: 100vw;
+        height: 20vh;
+        justify-content:space-evenly;
+        /* align-items: stretch; */
+        background-color: black;
+    }
+    .li_item{
+        text-align: center;
+    }
+    .hamburger{
+        margin-top: -90px;
+    }
+}
+@media (max-width : 600px) {
+    .navbar{
+        display: grid;
+        grid-template-columns:  40% 5% 55%;
+    }
+    .registration{
+        font-size: 15px;
+    }
+    .log_in{
+        font-size: 15px;
+        padding: 3px 10px;
+    }
+    .register{
+        padding: 8px 10px;
+    }
+    
+    .hamburger{
+        margin-top: -60px;
+    }
+}
+
+
+  
+  .hamburger div {
+    position: relative;
+    width: 2.1em;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    margin-top: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #toggle{
+    display: none;
+  }
+  #toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+  }
+  #toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  #toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -4px;
+  }
+  
+  #toggle:checked + .hamburger + .nav {
+    top: 0;
+    transform: scale(1);
+  }
+
+  @media (max-width:350px){
+    .nav_img img{
+        height: 60px;
+        padding: 5px;
+        padding-left:15px ;
+        padding-right: 0;
+    }
+  }
+
+
+
+
+
+  .button3 {
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+  }
+  
+  .button3:before {
+    background-color: black;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 10px;
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+  }
+  
+  .button3:hover:before {
+    background-color: black;
+    width: 3rem;
+  }

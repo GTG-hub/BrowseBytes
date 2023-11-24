@@ -1,12 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import BaseUserManager , AbstractBaseUser
 
-
+article_titles=[]
 
 INTERACTIONS=(
     ('Saved','Saved'),
     ('Viewed','Viewed')
 )
+
 #Creating user manager
 class UserManager(BaseUserManager):
     def create_user(self, email, name, password=None, password2 = None):
@@ -51,7 +52,6 @@ class User(AbstractBaseUser):
     updated_at = models.DateTimeField(auto_now = True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
-
     objects = UserManager()
 
     USERNAME_FIELD = "email"
@@ -79,7 +79,7 @@ class User(AbstractBaseUser):
 class Author(models.Model):
     AuthorID = models.AutoField(primary_key=True)
     a_name = models.CharField(max_length = 100)
-    email = models.EmailField(verbose_name="email address", max_length= 255, unique=True)
+    email = models.EmailField(verbose_name="email address", max_length= 255)
 
     def __int__(self):
         return self.AuthorID
@@ -92,12 +92,10 @@ class Category(models.Model):
     def __int__(self):
         return self.CategoryID
 
-
-
 class Article(models.Model):
     ArticleID = models.AutoField(primary_key=True)
     title = models.CharField(max_length = 200)
-    summary = models.CharField(max_length = 1000)
+    summary = models.CharField(max_length = 10000)
     AuthorID = models.ForeignKey(Author, on_delete=models.CASCADE)
     CategoryID = models.ForeignKey(Category, on_delete= models.CASCADE)
     Link_article = models.URLField(max_length=300, default="N/A")

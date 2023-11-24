@@ -3,7 +3,7 @@ djangorestframework
 django
 django-cors-headers
 mysqlclient
-# huggingsound
+huggingsound
 sentence-transformers 
 transformers
 torch
