@@ -106,11 +106,7 @@ export default function Home2() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="button__wrap">
-<<<<<<< HEAD
         <button onClick={handleClick} className="button1">Good Morning</button>
-=======
-        <button onClick={handleClick} className="button1">{greeting}</button>
->>>>>>> 1235fa0179653d554e45f44ea9d40b87eddf7eda
         <div className="button__shadow"></div>
       </motion.div>}
       </AnimatePresence>

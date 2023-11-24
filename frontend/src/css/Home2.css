@@ -41,11 +41,7 @@
     --x: 0;
     --rotation: 0;
     --speed: 2;
-<<<<<<< HEAD
     --txt: "Good Morning";
-=======
-    --txt: "Good Afternoon";
->>>>>>> 1235fa0179653d554e45f44ea9d40b87eddf7eda
     --padding: 1rem 1.25rem;
     cursor: pointer;
     padding: var(--padding);
